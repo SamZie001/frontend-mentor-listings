@@ -1,7 +1,7 @@
 import { useState} from 'react'
 import styles from './Filter.module.css'
 
-const Filter = ({retrieve}) => {
+const Filter = () => {
   const [filtersArray, setFiltersArray] = useState([])
   const [search, setSearch] = useState('')
 
@@ -11,7 +11,11 @@ const Filter = ({retrieve}) => {
     if(search !== ''){
       setFiltersArray([...filtersArray, search])
     }
-    retrieve(filtersArray)
+
+    // filter through the current selection
+    
+    // clear search box
+    setSearch('')
   }
 
   const clearDIV = () => {
