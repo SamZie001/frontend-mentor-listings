@@ -1,17 +1,17 @@
-import { useState, useRef } from 'react'
+import { useState} from 'react'
 import styles from './Filter.module.css'
 
-const Filter = () => {
+const Filter = ({retrieve}) => {
   const [filtersArray, setFiltersArray] = useState([])
   const [search, setSearch] = useState('')
 
   const handleSubmit = e => {
     e.preventDefault()
 
-    if(search != ''){
+    if(search !== ''){
       setFiltersArray([...filtersArray, search])
     }
-    setSearch('')
+    retrieve(filtersArray)
   }
 
   const clearDIV = () => {
@@ -21,7 +21,7 @@ const Filter = () => {
   const clearSELECT = (e) =>{
     const id = e.target.parentElement.children[0].innerText
     setFiltersArray(filtersArray.filter(each=>{
-      return each!=id
+      return each!==id
     }))
   }
 

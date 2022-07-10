@@ -19,16 +19,16 @@
     padding-left: 27px;
     transition: 0.1s;
 }
-.container img:hover{
-    transform: rotateZ(360deg);
-    transition: 1.3s;
-    cursor: pointer;
+.rotating {
+    animation: rotate 10s infinite;
 }
-.side{
-    width: 1px;
-    height: 0px;
-    border: 1px solid black;
-    background: green;
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.container img{
+    cursor: pointer;
 }
 
 /* details */
@@ -101,4 +101,8 @@
 .category button:hover{
     color: white;
     background: hsl(180, 29%, 50%);
+}
+
+.noshow{
+    display: none;
 }
