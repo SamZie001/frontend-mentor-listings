@@ -1,0 +1,104 @@
+.Listings{
+    width: 1000px;
+    margin: 30px auto;
+}
+.container{
+    border: none;
+    border-radius: 3px;
+    height: auto;
+    display: flex;
+    padding: 20px 30px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    box-shadow: 3px 3px 8px hsl(180, 29%, 50%);
+    background: white;
+}
+.container:hover{
+    border-left: 4px solid hsl(180, 29%, 50%);
+    padding-left: 27px;
+    transition: 0.1s;
+}
+.container img:hover{
+    transform: rotateZ(360deg);
+    transition: 1.3s;
+    cursor: pointer;
+}
+.side{
+    width: 1px;
+    height: 0px;
+    border: 1px solid black;
+    background: green;
+}
+
+/* details */
+.details{
+    display: block;
+    justify-content: space-evenly;
+    min-width: 300px;
+    margin-left: 50px;
+}
+.company, .position{
+    margin-bottom: 10px;
+}
+.position:hover{
+    cursor: pointer;
+    color: hsl(180, 29%, 50%);
+    transition: 0.3s;
+}
+.details .status{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    color: hsl(180, 8%, 52%);
+}
+.details .compDets{
+    display: flex;
+    align-items: center;
+}
+.compDets:first-child{
+    color: hsl(180, 29%, 50%);
+    font-weight: bold;
+}
+.compDets .new, .featured{
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+    padding-top: 6px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.new{
+    background: hsl(180, 29%, 50%);
+}
+.featured{
+    background: hsl(180, 14%, 20%);
+}
+
+
+/* category */
+.category{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left:auto;
+    margin-right:0;
+}
+.category button{
+    margin-right: 12px;
+    padding: 5px;
+    color: hsl(180, 29%, 50%);
+    background: hsl(180, 52%, 96%);
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.category button:hover{
+    color: white;
+    background: hsl(180, 29%, 50%);
+}
