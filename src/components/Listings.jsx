@@ -1,7 +1,6 @@
 import styles from './Listings.module.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useFetch } from '../hooks/useFetch'
 
 function Listings() {
     const [url, setUrl] = useState('http://localhost:3000/listings')
